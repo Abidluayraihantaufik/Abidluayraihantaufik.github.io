@@ -3,58 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Diri</title>
+    <title>Biodata Diri</title>
     <style>
+        /* Gaya dasar halaman */
         body {
             font-family: Arial, sans-serif;
-            background-color: #f9f9f9;
+            background-image: url('img/bg.jpeg'); /* Ganti path/to/your-image.jpg dengan path gambar Anda */
+            background-size: cover;
+            background-position: center;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
             margin: 0;
         }
+
+        /* Kartu Data Diri */
         .data-diri {
-            background-color: #ffffff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            width: 300px;
+            background: #f2f4f5;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            width: 350px;
             text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 2px solid #d3d6db;
         }
-        .data-diri img {
-            width: 100px;
-            height: 100px;
+
+        /* Efek hover pada kartu */
+        .data-diri:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Foto Profil */
+        .data-diri img.profile-photo {
+            width: 110px;
+            height: 110px;
             border-radius: 50%;
             object-fit: cover;
+            border: 4px solid #4ca1af;
+            margin-bottom: 15px;
+            transition: transform 0.3s ease;
         }
+
+        /* Efek hover pada foto profil */
+        .data-diri img.profile-photo:hover {
+            transform: scale(1.1);
+            border-color: #2c3e50;
+        }
+
+        /* Nama */
         .data-diri h2 {
             margin-top: 10px;
-            font-size: 1.5em;
+            font-size: 1.8em;
+            color: #333;
         }
+
+        /* Garis pembatas */
+        .separator {
+            height: 1px;
+            background-color: #ccc;
+            margin: 15px 0;
+        }
+
+        /* Informasi Data Diri */
         .data-diri p {
-            margin: 5px 0;
+            margin: 8px 0;
             font-size: 1em;
-            color: #555;
+            color: #666;
         }
+
+        /* Tanda Tangan */
         .tanda-tangan {
-            margin-top: 15px;
+            margin-top: 20px;
             font-style: italic;
+            color: #444;
+        }
+
+        /* Gaya Tanda Tangan */
+        .tanda-tangan img.signature {
+            width: 100px;
+            height: auto;
+            margin-top: 8px;
+            filter: grayscale(80%);
+            opacity: 0.7; /* Transparansi tanda tangan */
+            transition: filter 0.3s ease, opacity 0.3s ease;
+            border: 2px solid #4ca1af; /* Border untuk tanda tangan */
+            border-radius: 50px; /* Membuat border menjadi oval */
+        }
+
+        /* Efek hover pada tanda tangan */
+        .tanda-tangan img.signature:hover {
+            filter: grayscale(0%);
+            opacity: 1; /* Menjadi tidak transparan saat di-hover */
         }
     </style>
 </head>
 <body>
 
 <div class="data-diri">
-    <img src="img/Me.jpeg" alt="Foto Profil">
+    <!-- Foto Profil -->
+    <img src="img/Me.jpeg" alt="Foto Profil" class="profile-photo">
+    
+    <!-- Nama -->
     <h2>Abid Luay Raihan Taufik</h2>
+    <h3>312210401</h3>
+    <!-- Garis Pembatas -->
+    <div class="separator"></div>
+
+    <!-- Info Diri -->
     <p>Alamat: Jl. Jagawana rt 005/007 No. 96, Bekasi</p>
     <p>Telepon: 081284691134</p>
     <p>Email: abdrhn870@gmail.com</p>
 
+    <!-- Garis Pembatas -->
+    <div class="separator"></div>
+
+    <!-- Tanda Tangan -->
     <div class="tanda-tangan">
         <p>Tanda Tangan:</p>
-        <img src="img/ttd.jpg" alt="Tanda Tangan" style="width: 80px; height: auto;">
+        <img src="img/ttd.png" alt="Tanda Tangan" class="signature">
     </div>
 </div>
 
